@@ -52,12 +52,14 @@ def check_header(file, content_lines):
 
 def check_trailing_spaces(file, content_lines):
 	valid = True
+	line_index = -1
 	for i in range(0, len(content_lines)):
 		if content_lines[i].endswith((' ', '\t')):
 			valid = False
+			line_index = i
 
 	if not valid:
-		show_warning(file, "The file has trailing spaces.")
+		show_warning(file, "The file has trailing spaces in " + str(line_index + 1))
 
 	return valid
 
