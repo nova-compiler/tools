@@ -35,7 +35,6 @@ def substitute_text(contents, context, strict):
 							print('Warning: variable %' + variable_name + '% was not found in context. Ignored.')
 						else:
 							raise SubstituteError(('variable %' + variable_name + '% was not found in context.',))
-
 					
 				index = end + 1
 			else:
@@ -63,6 +62,11 @@ def substitute_file(input_file_path, output_file_path, context_file, strict):
 				output_file.write(processed_output)
 
 		return 0
+
+	except IOError as err:
+		print('Error: ' + err.args[1])
+		return 1
+
 	except SubstituteError as err:
 		print('Error: ' + err.args[0])
 		print('Operation aborted.')
