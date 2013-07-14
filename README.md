@@ -6,7 +6,7 @@ TODO: include code-check lint tool.
 
 ## substitute.py
 
-It substitute variables in files by a value existing in other files. For example, with a configuration file as:
+It replaces variables in a file with the corresponding value in context file. For example, given the following context file,
 
 <pre>
 {
@@ -20,12 +20,14 @@ The template text,
 
 <pre>
 The %thing% is a lie.
+And the lord of %% will almost disappear.
 </pre>
 
-will be substituted to,
+will be transformed to,
 
 <pre>
 The cake is a lie.
+And the lord of % will almost disappear.
 </pre>
 
 For usage:
