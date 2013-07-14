@@ -98,7 +98,7 @@ def read_arguments(args):
 	return input_file, output_file, context_file, strict
 
 def usage():
-	print('Usage: python substitute.py -i <input-file> -o <output-file> [-c <context-file>]')
+	print('Usage: python substitute.py -i <input-file> -o <output-file> [-c <context-file>] [-s]')
 	print('Version: ' + version)
 	print('Copyright (c) 2013 Luis Garcia')
 	print('')
