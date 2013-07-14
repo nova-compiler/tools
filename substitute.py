@@ -116,4 +116,5 @@ def main(args):
 	return_code = substitute_file(input_file, output_file, context_file, strict)
 	sys.exit(return_code)	
 
-main(sys.argv[1:])
+if __name__ == '__main__':
+	main(sys.argv[1:])
