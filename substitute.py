@@ -25,7 +25,7 @@ def substitute_text(contents, context, strict):
 					else:
 						raise SubstituteError(('unmatched % was found.',))
 				elif end - index == 1:
-					output.write('%%')
+					output.write('%')
 				else:
 					variable_name = contents[index + 1:end]
 					if variable_name in context:
