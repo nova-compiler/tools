@@ -1,3 +1,13 @@
+#
+# substitute.py
+#
+# Copyright (c) 2013 Luis Garcia.
+# This source file is subject to terms of the MIT License. (See accompanying file LICENSE)
+# 
+
+# NOTE:
+# This script requires Python3
+
 import getopt, os, sys, json, io
 
 version = '0.1.0'
