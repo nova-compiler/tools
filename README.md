@@ -39,4 +39,4 @@ Where &lt;input-file&gt;, &lt;output-file&gt;, and &lt;context-file&gt; are the 
 
 ## License
 
-This projects use the [MIT License](LICENSE.md).
+These utilities are licensed through the [MIT License](LICENSE.md).
