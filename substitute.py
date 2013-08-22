@@ -21,7 +21,7 @@ class SubstituteError(RuntimeError):
 		self.args = arg
 
 def substitute_text(contents, context, strict):
-	with io.BytesIO() as output:
+	with io.StringIO() as output:
 		index = 0
 		while index < len(contents):
 			if contents[index] == '%':
@@ -39,7 +39,7 @@ def substitute_text(contents, context, strict):
 				else:
 					variable_name = contents[index + 1:end]
 					if variable_name in context:
-						output.write(context[variable_name].encode('utf-8'))
+						output.write(context[variable_name])
 					else:
 						if not strict:
 							print('Warning: variable %' + variable_name + '% was not found in context. Ignored.')
